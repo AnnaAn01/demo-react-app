@@ -1,11 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Summ from "./Example.js";
+import { multiply, sayHello } from "./Example.js";
+import DateAndTime from "./Moment.js";
+import Person from "./Person.js";
 
 function App() {
+  console.log(Summ(2, 4));
+  console.log(multiply(2, 5));
+
+  console.log(sayHello());
+
   return (
     <div className="App">
       <header className="App-header">
+        <Person name="Anna" />
+        <DateAndTime />
+        <h1>This is our first project</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,6 +30,7 @@ function App() {
         >
           Learn React
         </a>
+        <Person />
       </header>
     </div>
   );
